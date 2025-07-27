@@ -1,29 +1,29 @@
+
+
 import 'package:flutter/material.dart';
 
-class TCheckboxTheme {
-  TCheckboxTheme._();
+class TBottomSheetTheme {
+  TBottomSheetTheme._();
 
-  static CheckboxThemeData lightCheckboxTheme = CheckboxThemeData(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-    checkColor: MaterialStateProperty.resolveWith((state) {
-      return Colors.white;
-    }),
-    fillColor: MaterialStateProperty.resolveWith((state) {
-      return state.contains(MaterialState.selected)
-          ? const Color(0xFFE91E63) // Romantic pink
-          : Colors.grey.shade300;
-    }),
+  static BottomSheetThemeData lightBottomSheetTheme = BottomSheetThemeData(
+    showDragHandle: true,
+    backgroundColor: Colors.pink.shade50,
+    modalBackgroundColor: Colors.pink.shade50,
+    constraints: const BoxConstraints(minWidth: double.infinity),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+    ),
+    elevation: 10,
   );
 
-  static CheckboxThemeData darkCheckboxTheme = CheckboxThemeData(
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
-    checkColor: MaterialStateProperty.resolveWith((state) {
-      return Colors.white;
-    }),
-    fillColor: MaterialStateProperty.resolveWith((state) {
-      return state.contains(MaterialState.selected)
-          ? const Color(0xFFE91E63) // Romantic pink
-          : Colors.grey.shade700;
-    }),
+  static BottomSheetThemeData darkBottomSheetTheme = BottomSheetThemeData(
+    showDragHandle: true,
+    backgroundColor: const Color(0xFF2C1B2E),
+    modalBackgroundColor: const Color(0xFF2C1B2E),
+    constraints: const BoxConstraints(minWidth: double.infinity),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+    ),
+    elevation: 10,
   );
 }

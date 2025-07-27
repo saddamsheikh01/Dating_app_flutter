@@ -37,6 +37,7 @@ dependencies:
   url_launcher: ^6.2.5
   get: ^4.6.6
   intl: ^0.18.1
+  iconsax: ^0.0.8
 
 
 dev_dependencies:

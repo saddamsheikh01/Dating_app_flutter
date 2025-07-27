@@ -12,21 +12,23 @@ class OnboardingIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<OnboardingController>();
 
-    return Obx(() => Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: List.generate(length, (index) {
-        final isActive = controller.currentPage.value == index;
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 300),
-          margin: const EdgeInsets.symmetric(horizontal: TSizes.xs),
-          width: isActive ? TSizes.iconXs : TSizes.iconXs,
-          height: isActive ? TSizes.iconXs : TSizes.iconXs,
-          decoration: BoxDecoration(
-            color: isActive ? TColors.primary : TColors.grey,
-            shape: BoxShape.circle,
-          ),
-        );
-      }),
-    ));
+    return Obx(
+          () => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(length, (index) {
+          final isActive = controller.currentPage.value == index;
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 300),
+            margin: const EdgeInsets.symmetric(horizontal: TSizes.xs),
+            width: isActive ? TSizes.iconXs : TSizes.iconXs,
+            height: isActive ? TSizes.iconXs : TSizes.iconXs,
+            decoration: BoxDecoration(
+              color: isActive ? TColors.primary : TColors.grey,
+              shape: BoxShape.circle,
+            ),
+          );
+        }),
+      ),
+    );
   }
 }

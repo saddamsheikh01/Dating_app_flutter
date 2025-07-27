@@ -1,3 +1,4 @@
+import 'package:dataing_app/screens/auth/create_account/create_account_screen.dart';
 import 'package:dataing_app/screens/on_boarding_screens/widget/onboarding_indicator.dart';
 import 'package:dataing_app/screens/on_boarding_screens/widget/onboarding_item_widget.dart';
 import 'package:dataing_app/utils/constants/sizes.dart';
@@ -58,7 +59,7 @@ class OnboardingScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: TSizes.lg),
               child: PrimaryButton(
                 text: 'Create an account',
-                onPressed: onboardingController.createAccount,
+                onPressed: () => Get.to(() => const CreateAccountScreen()),
               ),
             ),
 

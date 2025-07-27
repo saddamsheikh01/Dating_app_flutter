@@ -16,6 +16,8 @@ class OnboardingItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md),
       child: Column(
@@ -26,7 +28,7 @@ class OnboardingItemWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(TSizes.cardRadiusLg),
             child: Image.asset(
               imagePath,
-              height: 400,
+              height: 380,
               width: double.infinity,
               fit: BoxFit.contain,
             ),
@@ -34,8 +36,9 @@ class OnboardingItemWidget extends StatelessWidget {
           const SizedBox(height: TSizes.spaceBtwSections),
           Text(
             title,
+            textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: TSizes.fontSizeLg + 6,
+              fontSize: TSizes.fontSizeXl,
               fontWeight: FontWeight.bold,
               color: TColors.primary,
             ),
@@ -46,9 +49,9 @@ class OnboardingItemWidget extends StatelessWidget {
             child: Text(
               description,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: TSizes.fontSizeMd,
-                color: TColors.textPrimary,
+                color: isDark ? TColors.textWhite : TColors.textPrimary,
               ),
             ),
           ),
