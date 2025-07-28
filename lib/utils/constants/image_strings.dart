@@ -4,10 +4,9 @@
 class TImages {
   // -- App Logos
 
-  static const String darkAppLogo =
-      "assets/logos/t-store-splash-logo-black.png";
-  static const String lightAppLogo =
-      "assets/logos/t-store-splash-logo-white.png";
+  static const String darkApp=
+      "assets/logo_images/trademark.png";
+
 
   // -- Social Logos
 
@@ -19,6 +18,11 @@ class TImages {
   static const String onBoardingImage3 =
       "assets/onboarding_images/girl3.png";
 
-
-
+//--- icons
+  static const String googleICon =
+      "assets/logo_images/google.png";
+  static const String facebookIcon =
+      "assets/logo_images/facebook-logo.png";
+      static const String appleIcon =
+      "assets/logo_images/apple .png";
 }

@@ -38,6 +38,8 @@ dependencies:
   get: ^4.6.6
   intl: ^0.18.1
   iconsax: ^0.0.8
+  intl_phone_field: ^3.2.0
+
 
 
 dev_dependencies:
@@ -66,6 +68,7 @@ flutter:
   assets:
     - assets/
     - assets/onboarding_images/
+    - assets/logo_images/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

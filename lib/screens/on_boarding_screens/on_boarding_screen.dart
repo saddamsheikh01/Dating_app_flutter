@@ -1,4 +1,5 @@
 import 'package:dataing_app/screens/auth/create_account/create_account_screen.dart';
+import 'package:dataing_app/screens/auth/sign_up/SignUp_Screen.dart';
 import 'package:dataing_app/screens/on_boarding_screens/widget/onboarding_indicator.dart';
 import 'package:dataing_app/screens/on_boarding_screens/widget/onboarding_item_widget.dart';
 import 'package:dataing_app/utils/constants/sizes.dart';
@@ -68,11 +69,11 @@ class OnboardingScreen extends StatelessWidget {
             TextLinkButton(
               leadingText: 'Already have an account? ',
               linkText: 'Sign In',
-              onTap: onboardingController.signIn,
+              onTap: () => Get.to(() => const SignUpScreen()),
             ),
-
             const SizedBox(height: TSizes.spaceBtwSections),
-          ],
+
+          ]
         ),
       ),
     );

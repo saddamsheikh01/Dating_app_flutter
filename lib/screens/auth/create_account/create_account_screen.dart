@@ -97,6 +97,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                 ),
               ],
             ),
+
             const SizedBox(height: TSizes.spaceBtwSections),
 
             /// Create Button
