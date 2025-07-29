@@ -1,3 +1,4 @@
+import 'package:dataing_app/screens/auth/create_account/widget/custom_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:dataing_app/utils/constants/colors.dart';
@@ -22,10 +23,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
 
     return Scaffold(
       backgroundColor: isDark ? TColors.dark : TColors.light,
-      appBar: const TAppBar(
-        title: Text('Create Account'),
-        showBackArrow: true,
-      ),
+      appBar: const TAppBar(title: Text('Create Account'), showBackArrow: true),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
@@ -52,14 +50,16 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
             const SizedBox(height: TSizes.spaceBtwSections),
 
             /// Form Fields
-            _buildInputField(label: 'Full Name'),
+            // Update path
+            CustomInputField(label: 'Phone Number'),
             const SizedBox(height: TSizes.spaceBtwItem),
-            _buildInputField(label: 'Email'),
-            const SizedBox(height: TSizes.spaceBtwItem),
-            _buildInputField(label: 'Password', obscureText: true),
-            const SizedBox(height: TSizes.spaceBtwItem),
-            _buildInputField(label: 'Confirm Password', obscureText: true),
 
+            CustomInputField(label: 'Email'),
+            const SizedBox(height: TSizes.spaceBtwItem),
+            CustomInputField(label: 'Password', obscureText: true),
+            const SizedBox(height: TSizes.spaceBtwItem),
+
+            CustomInputField(label: 'Password', obscureText: true),
             const SizedBox(height: TSizes.spaceBtwSections),
 
             /// Checkbox: Terms & Privacy
@@ -113,15 +113,6 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildInputField({required String label, bool obscureText = false}) {
-    return TextFormField(
-      obscureText: obscureText,
-      decoration: InputDecoration(
-        labelText: label,
       ),
     );
   }
