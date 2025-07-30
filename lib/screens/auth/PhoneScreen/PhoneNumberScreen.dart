@@ -56,7 +56,8 @@ class PhoneNumberScreen extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwSections),
 
         // Continue Button
-        PrimaryButton(text: 'Continue', onPressed: () {
+        PrimaryButton(text: 'Continue',
+          onPressed: () {
           Get.to(() => const OTPScreen());
         },
         ),

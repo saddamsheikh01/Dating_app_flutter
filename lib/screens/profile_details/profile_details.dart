@@ -1,5 +1,6 @@
 import 'package:dataing_app/common/widgets/appbar.dart';
 import 'package:dataing_app/common/widgets/primary_button.dart';
+import 'package:dataing_app/screens/gender_screen/gender_screen.dart';
 import 'package:dataing_app/screens/profile_details/widget/showBirthdayPicker.dart';
 import 'package:dataing_app/utils/constants/colors.dart';
 import 'package:dataing_app/utils/constants/sizes.dart';
@@ -137,9 +138,9 @@ class _ProfileDetailsScreenState extends State<ProfileDetailsScreen> {
             /// Confirm Button
             PrimaryButton(
               text: 'Confirm',
-              onPressed: () {
-                // TODO: Handle form submit
-              },
+         onPressed: () {
+      Get.to(() => const GenderScreen());
+      },
             ),
           ],
         ),
