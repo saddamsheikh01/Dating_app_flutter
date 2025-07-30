@@ -28,4 +28,8 @@ class TImages {
 
       // profile details pics
 static const String profileDetailsImage = 'assets/logo_images/photo.png';
+ // search friends
+static const String searchFriendImage = 'assets/logo_images/people.png';
+ // Enable notification image
+ static const String enableNotificationImage = 'assets/logo_images/chat.png';
 }

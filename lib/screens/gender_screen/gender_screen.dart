@@ -1,8 +1,10 @@
 import 'package:dataing_app/screens/Interest_Screen/Interest_Screen.dart';
+import 'package:dataing_app/screens/search_friend/search_friend.dart';
 import 'package:dataing_app/utils/constants/colors.dart';
 import 'package:dataing_app/utils/constants/sizes.dart';
 import 'package:dataing_app/common/widgets/appbar.dart';
 import 'package:dataing_app/common/widgets/primary_button.dart';
+import 'package:dataing_app/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -21,8 +23,11 @@ class _GenderScreenState extends State<GenderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = THelperFunctions.isDarkMode(context);
+
     return Scaffold(
-      backgroundColor: TColors.light,
+      backgroundColor: isDark ? TColors.dark : TColors.light,
+
       appBar: TAppBar(
         showBackArrow: true,
         title: const Text('Gender'),
@@ -115,7 +120,7 @@ class _GenderScreenState extends State<GenderScreen> {
             PrimaryButton(
               text: 'Continue',
               onPressed: () {
-                Get.to(() => const InterestsScreen());
+                Get.to(() => const SearchFriend());
               },
 
             ),
