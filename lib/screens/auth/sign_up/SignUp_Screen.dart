@@ -2,6 +2,7 @@ import 'package:dataing_app/common/widgets/PhoneOutlinedButton.dart';
 import 'package:dataing_app/common/widgets/primary_button.dart';
 import 'package:dataing_app/screens/auth/PhoneScreen/PhoneNumberScreen.dart';
 import 'package:dataing_app/screens/auth/sign_up/widgets/icon_widget.dart';
+import 'package:dataing_app/screens/profile_details/profile_details.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart' show Get;
@@ -48,7 +49,9 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: TSizes.spaceBtwItem),
 
                 // Continue with email
-                PrimaryButton(text: 'Continue with email', onPressed: () {  },),
+                PrimaryButton(text: 'Continue with email',  onPressed: () {
+                  Get.to(() => const ProfileDetailsScreen());
+                },),
 
                 const SizedBox(height: TSizes.spaceBtwItem),
 

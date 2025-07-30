@@ -25,4 +25,7 @@ class TImages {
       "assets/logo_images/facebook-logo.png";
       static const String appleIcon =
       "assets/logo_images/apple .png";
+
+      // profile details pics
+static const String profileDetailsImage = 'assets/logo_images/photo.png';
 }
