@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:dataing_app/screens/main/Discover_Screen.dart';
 import 'package:dataing_app/utils/constants/colors.dart';
+import 'package:flutter/material.dart';
 import 'package:dataing_app/utils/constants/sizes.dart';
 import 'package:dataing_app/utils/constants/image_strings.dart';
 import 'package:dataing_app/common/widgets/primary_button.dart';
@@ -84,7 +85,7 @@ class _EnableNotificationState extends State<EnableNotification> {
             PrimaryButton(
               text: 'I want to be notified',
               onPressed: () {
-                Get.to(() => const ());
+                Get.to(() => const DiscoverScreen());
 
               },
             ),
